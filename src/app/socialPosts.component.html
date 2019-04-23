@@ -1,0 +1,37 @@
+<h1>Welcome to My Thoughts!</h1>
+
+<button class="header" (click)="toggleSection()">New Thought?</button>
+
+<section class="box1" [hidden]="hideTitle" [ngClass]="classList">
+
+<h4>Title</h4>  
+<p class="title">
+    <input class="titleBox" type="text" placeholder="Post title" [(ngModel)]="titleInput"/>
+</p>
+
+<h4>Post</h4>
+<p class="post">
+    <input class="postBox" type="text" [(ngModel)]="thoughtInput"/>
+</p> 
+
+<li *ngFor="let previousThoughts of thoughtList let i = index">
+
+</li>
+<button class="addThought" (click)="addThought()" >Add Post</button>
+</section>
+
+<section class="box2">
+
+  <li *ngFor="let previousThoughts of thoughtList">
+
+ <!-- <input type="text" placeholder="What are you thinking?" [(ngModel)]="thoughtInput"/>  -->
+    
+  <!-- <button (click)="addThought()">New Thought</button>  -->
+  
+    <p [ngClass]="classList"> {{ previousThoughts.thought }}</p>
+    </li>
+
+</section> 
+
+
+

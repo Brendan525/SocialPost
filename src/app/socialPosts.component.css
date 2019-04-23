@@ -1,0 +1,53 @@
+.header {
+    background-color: white;
+    width: 60%;
+    height: 40px;
+    border-radius: 15px;
+    margin-bottom: 20px;
+}
+
+.box1 {
+    background-color: blue;
+    border-radius: 15px;
+    width: 50%;
+    flex-direction: column;
+    border: 1px;    
+    text-align: left;
+    margin-left: 325px;
+    padding-left: 35px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+};
+
+
+p {
+    margin: 0%;
+}
+
+.post {
+    margin: 0px
+};
+
+.addThought {
+    margin-left: 125px;
+}
+
+input {
+    padding-right: 57%;
+};
+
+.titleBox {
+    margin-top: 5px;
+}
+
+.postBox { 
+    height: 200px;
+    width: 130px;
+    margin-top: 10px;
+    margin-bottom: 30px
+}
+
+.title{ 
+    color: lightblue;
+}
+ 
