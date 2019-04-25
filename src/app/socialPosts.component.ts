@@ -4,9 +4,10 @@ interface previousThoughts {
   thought: string;
 }
 
-// interface previousTitle {
-//   title: string;
-// }
+interface previousTitle {
+  title: string;
+  thought: string;
+}
 
 @Component({
   selector: 'app-root', 
@@ -14,42 +15,44 @@ interface previousThoughts {
   styleUrls: ['./socialPosts.component.css']
 })
 export class AppComponent {
-  title = 'SocialPost';
+  header = 'SocialPost';
   thoughtInput: string;
   previousTitle: string;
   previousThoughts: string;
   postInput: string;
   titleInput: string;
   hideTitle: boolean = true;
-  
-  // thoughtTitle: previousTitle[] = [
-  //   {title: 'Dog'},
-  //   {title: 'Cat'},
-  //   {title: 'Pig'},
-  //   {title: 'Cow'},
-  //   {title: 'Whale'},
-  // ];
+  title: string;
+  thought: string;
 
+  
+  thoughtTitle: previousTitle[] = [
+    {title: 'Dog', thought: 'Where am I?'},
+    {title: 'Cat', thought: 'Who is this?'},
+    {title: 'Pig', thought: 'What am I doing?'},
+    {title: 'Cow', thought: 'Who are you'},
+    {title: 'Whale', thought: 'Why are you here?'},
+  ];
 
   thoughtList: previousThoughts[] = [
-    {thought: 'Where am I?'},
-    {thought: 'Who is this?'},
-    {thought: 'What am I doing?'},
-    {thought: 'Who are you'},
-    {thought: 'Why are you here?'},
+  
   ];
 
   onSubmittEvent(eventArgs){
-    this.thoughtList.push(eventArgs);
+    this.thoughtTitle.push(eventArgs);
   }
 
   addThought = () => {
     const newThought = {
+      title: this.titleInput,
       thought: this.thoughtInput,
     };
-    this.thoughtList.push(newThought);
+    this.thoughtTitle.push(newThought);
     this.thoughtInput = null;
+    this.previousTitle = null;
+
   }
+  
 
   // addTitle = () => {
   //   const addTitle = {
@@ -59,7 +62,7 @@ export class AppComponent {
   //   this.titleInput = null;
   // }
 
-  toggleSection = () => {
-    this.hideTitle = !this.hideTitle;
-  };
+  // toggleSection = () => {
+  //   this.hideTitle = !this.hideTitle;
+  // };
 }

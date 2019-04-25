@@ -2,7 +2,7 @@
 
 body {
     background-color: lightgrey;
-    text-align: center
+    text-align: center;
 };
 
 h4 {    
@@ -16,7 +16,6 @@ h4 {
     margin-left: 240px;
 } 
 
-
 .header {
     background-color: white;
     width: 50%;
@@ -26,6 +25,19 @@ h4 {
 }
 
 .box1 {
+    background-color: lightblue;
+    border-radius: 15px;
+    width: 600px;
+    flex-direction: column;
+    border: 1px;    
+    text-align: left;
+    margin-left: 325px;
+    padding-left: 35px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+};
+
+.another {
     background-color: white;
     border-radius: 15px;
     width: 600px;
@@ -48,21 +60,22 @@ input {
 };
 
 .titleBox {
-    /* width: 400px; */
+    width: 400px;
     height: 200px;
 }
-
-
 
 .postBox { 
     height: 200px;
-   
     margin-top: 10px;
-    margin-bottom: 30px
+    margin-bottom: 30px;
+    width: 500px;
 }
 
-/* .title{ 
-    color: lightblue;
-    
-} */
-
+.first, .second {
+    list-style-type: none;
+    margin: 0%;
+    padding: 0%;
+    border-bottom-style: solid;
+    border-color: green;
+    border-bottom-width: 5px ;
+}
