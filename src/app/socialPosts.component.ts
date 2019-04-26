@@ -38,20 +38,20 @@ export class AppComponent {
   
   ];
 
-  onSubmittEvent(eventArgs){
+  onSubmit(eventArgs){
     this.thoughtTitle.push(eventArgs);
   }
 
-  addThought = () => {
-    const newThought = {
-      title: this.titleInput,
-      thought: this.thoughtInput,
-    };
-    this.thoughtTitle.push(newThought);
-    this.thoughtInput = null;
-    this.previousTitle = null;
+  // addThought = () => {
+  //   const newThought = {
+  //     title: this.titleInput,
+  //     thought: this.thoughtInput,
+  //   };
+  //   this.thoughtTitle.push(newThought);
+  //   this.thoughtInput = null;
+  //   this.previousTitle = null;
 
-  }
+  // }
   
 
   // addTitle = () => {

@@ -1,7 +1,7 @@
 import { Component, Output, EventEmitter } from '@angular/core';
 
 interface previousTitle {
-title: string
+title: string;
 thought: string;
 }
 
@@ -31,7 +31,7 @@ export class PostFormComponent {
   titleInput: string;
   thoughtInput: string;
   hideTitle: boolean;
-  // item: object;
+
   Input: boolean;
   previousTitle: string;
 
@@ -40,9 +40,9 @@ export class PostFormComponent {
       title: this.titleInput,
       thought: this.thoughtInput,
     };
-    this.thoughtTitle.push(newThought);
+    this.submitted.emit(newThought);
     this.thoughtInput = null;
-    this.previousTitle = null;
+    this.titleInput = null;
 
   }
 
